@@ -1,0 +1,62 @@
+﻿@using Microsoft.AspNetCore.Identity
+@model IEnumerable<IdentityRole>
+
+@{
+    ViewData["Title"] = "Application Roles";
+}
+
+<style>
+    body {
+        background-color: #ffffff; /* White background color */
+        color: #ff69b4; /* Hot pink text color */
+    }
+
+    h1 {
+        color: #3498db; /* Blue header text color */
+    }
+
+    a {
+        color: #ff69b4; /* Hot pink link color */
+    }
+
+        a:hover {
+            color: #ff69b4; /* Darker hot pink link color on hover */
+        }
+
+    .table {
+        background-color: #3498db; /* Blue table background color */
+        color: #ffffff; /* White text color */
+    }
+
+        .table th {
+            background-color: #ff69b4; /* Hot pink table header background color */
+            color: #ffffff; /* White table header text color */
+        }
+
+        .table td {
+            background-color: #3498db; /* Blue table cell background color */
+        }
+</style>
+
+<h1>View Roles</h1>
+<p>
+    <a asp-action="create">Create Role</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Id)</th>
+            <th>@Html.DisplayNameFor(model => model.Name)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                <td>@Html.DisplayFor(modelItem => item.Name)</td>
+            </tr>
+        }
+    </tbody>
+</table>

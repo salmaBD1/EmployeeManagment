@@ -1,0 +1,87 @@
+﻿@model employeeManagemement.Models.Salle
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<style>
+    body {
+        background-color: #3498db; /* Blue background color */
+        color: #ffffff; /* White text color */
+    }
+
+    h1 {
+        color: #ff69b4; /* Pink header text color */
+    }
+
+    .form-group label {
+        color: #ff69b4; /* Pink label text color */
+    }
+
+    .form-control {
+        background-color: #ecf0f1; /* Light blue input background color */
+        color: #2c3e50; /* Dark blue text color */
+    }
+
+    .btn-primary {
+        background-color: #ff69b4; /* Pink button background color */
+        border-color: #ff69b4; /* Pink button border color */
+        color: #ffffff; /* White button text color */
+    }
+
+    .btn-primary:hover {
+        background-color: #e74c3c; /* Darker pink on hover */
+        border-color: #e74c3c; /* Darker pink border on hover */
+    }
+
+    a {
+        color: #3498db; /* Blue link color */
+    }
+
+    a:hover {
+        color: #2980b9; /* Darker blue link color on hover */
+    }
+
+    .text-danger {
+        color: #e74c3c; /* Dark pink error message color */
+    }
+</style>
+
+<h1>Create Salle</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Numero" class="control-label"></label>
+                <input asp-for="Numero" class="form-control" />
+                <span asp-validation-for="Numero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Capacite" class="control-label"></label>
+                <input asp-for="Capacite" class="form-control" />
+                <span asp-validation-for="Capacite" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Create</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

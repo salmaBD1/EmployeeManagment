@@ -1,0 +1,101 @@
+﻿@model IEnumerable<employeeManagemement.Models.Booking>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style>
+    body {
+        background-color: #ffffff; /* White background color */
+        color: #ff69b4; /* Hot pink text color */
+    }
+
+    h1 {
+        color: #3498db; /* Blue header text color */
+    }
+
+    a {
+        color: #ff69b4; /* Hot pink link color */
+    }
+
+        a:hover {
+            color: #ff69b4; /* Darker hot pink link color on hover */
+        }
+
+    .table {
+        background-color: #3498db; /* Blue table background color */
+        color: #ffffff; /* White text color */
+    }
+
+        .table th {
+            background-color: #ff69b4; /* Hot pink table header background color */
+            color: #ffffff; /* White table header text color */
+        }
+
+        .table td {
+            background-color: #3498db; /* Blue table cell background color */
+        }
+
+    .btn-hotpink {
+        background-color: #ff69b4; /* Hot pink button background color */
+        color: #ffffff; /* White button text color */
+        padding: 5px 10px;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        margin: 2px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+        .btn-hotpink:hover {
+            background-color: #3498db; /* Darker hot pink on hover */
+        }
+</style>
+
+<h1>Salle Booking</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroMembre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BookingFrom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BookingTo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salle)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.NumeroMembre)</td>
+                <td>@Html.DisplayFor(modelItem => item.CustomerName)</td>
+                <td>@Html.DisplayFor(modelItem => item.BookingFrom)</td>
+                <td>@Html.DisplayFor(modelItem => item.BookingTo)</td>
+                <td>@Html.DisplayFor(modelItem => item.Salle.Id)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn-hotpink">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn-hotpink">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn-hotpink">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

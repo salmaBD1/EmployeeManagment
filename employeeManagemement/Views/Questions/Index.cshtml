@@ -1,0 +1,84 @@
+﻿@model IEnumerable<employeeManagemement.Models.Question>
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<IdentityUser> UserManager
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include Bootstrap CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-
+        GLhlTQ8iKl9brFfRq0KG+8jKuNW4Aae4fQYjBXb0l95Z9srOqvVW/6b3pi6sz" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #4285f4; /* Google Blue */
+            font-size: 2.5em;
+            margin-top: 50px;
+        }
+
+        .btn-primary {
+            background-color: #4285f4;
+            border-color: #4285f4;
+        }
+
+        .btn-info,
+        .btn-warning,
+        .btn-danger {
+            color: #fff; /* White */
+        }
+
+        .btn {
+            width: 100px;
+            height: 40px;
+        }
+
+        h4, p {
+            color: #fff; /* White */
+        }
+    </style>
+    <title>Forum</title>
+</head>
+<body>
+    <h1>what's on your mind ? </h1>
+    <p>
+        <a asp-action="Create" class="btn btn-primary">Create </a>
+    </p>
+    @foreach (var item in Model)
+    {
+        <div>
+            <h4>@item.Title</h4>
+            <p>@item.Description</p>
+            <p>Posted by: @item.User.UserName | Total answers: @item.Answers.Count</p>
+
+            @if (item.IdentityUserId == UserManager.GetUserId(User))
+            {
+                <p>
+                    
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-warning">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                </p>
+            }
+            else
+            {
+                <p>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Details</a>
+                </p>
+            }
+            <hr />
+        </div>
+    }
+
+    <!-- Include Bootstrap JS and Popper.js if needed -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-
+        q4PRbLqROlp2oLd5GVG7jsZF9dZFD+1F2wUrLQ5rBhH8zfaXmWSd5tjLqV4VMWOZ" crossorigin="anonymous"></script>
+</body>
+</html>

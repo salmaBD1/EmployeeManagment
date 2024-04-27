@@ -1,0 +1,102 @@
+﻿@model employeeManagemement.Models.Booking
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<style>
+    body {
+        background-color: #ffffff; /* White background color */
+        color: #ff69b4; /* Hot pink text color */
+    }
+
+    h1 {
+        color: #ff69b4; /* Hot pink header text color */
+    }
+
+    h4 {
+        color: #ff69b4; /* Hot pink subtitle text color */
+    }
+
+    .form-group label {
+        color: #ff69b4; /* Hot pink label text color */
+    }
+
+    .form-control {
+        background-color: #ffffff; /* White input background color */
+        color: #ff69b4; /* Hot pink text color */
+    }
+
+    .btn-primary {
+        background-color: #ff69b4; /* Hot pink button background color */
+        border-color: #ff69b4; /* Hot pink button border color */
+    }
+
+        .btn-primary:hover {
+            background-color: #e74c3c; /* Darker hot pink on hover */
+            border-color: #e74c3c; /* Darker hot pink border on hover */
+        }
+
+    a {
+        color: #ff69b4; /* Hot pink link color */
+    }
+
+        a:hover {
+            color: #e74c3c; /* Darker hot pink on hover */
+        }
+
+    .text-danger {
+        color: #ff69b4; /* Hot pink error message color */
+    }
+</style>
+
+<h1>Edit Booking</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="NumeroMembre" class="control-label"></label>
+                <input asp-for="NumeroMembre" class="form-control" />
+                <span asp-validation-for="NumeroMembre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustomerName" class="control-label"></label>
+                <input asp-for="CustomerName" class="form-control" />
+                <span asp-validation-for="CustomerName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BookingFrom" class="control-label"></label>
+                <input asp-for="BookingFrom" class="form-control" />
+                <span asp-validation-for="BookingFrom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BookingTo" class="control-label"></label>
+                <input asp-for="BookingTo" class="form-control" />
+                <span asp-validation-for="BookingTo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SalleId" class="control-label"></label>
+                <select asp-for="SalleId" class="form-control" asp-items="ViewBag.SalleId"></select>
+                <span asp-validation-for="SalleId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

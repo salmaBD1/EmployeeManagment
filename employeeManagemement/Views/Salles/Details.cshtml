@@ -1,0 +1,67 @@
+﻿@model employeeManagemement.Models.Salle
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<style>
+    body {
+        background-color: #f5f5f5; /* Light grey background color */
+        color: #ff69b4; /* Dark grey text color */
+    }
+
+    h1 {
+        color: #ff69b4; /* Hot pink header text color */
+    }
+
+    h4 {
+        color: #3498db; /* Blue subheader text color */
+    }
+
+    dl.row dt {
+        color: #ff69b4; /* Hot pink label text color */
+    }
+
+    dl.row dd {
+        color: #f5f5f5; /* Dark blue value text color */
+    }
+
+    a {
+        color: #3498db; /* Blue link color */
+    }
+
+        a:hover {
+            color: #2980b9; /* Darker blue link color on hover */
+        }
+</style>
+
+<h1>Salle Details</h1>
+
+<div>
+    
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Numero)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Numero)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Capacite)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Capacite)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> ||
+    <a asp-action="Index">Back to List</a>
+</div>

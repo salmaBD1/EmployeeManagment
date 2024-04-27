@@ -1,0 +1,96 @@
+﻿@using System.Data
+@model IEnumerable<ObjFile>
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
+<style type="text/css">
+    .btn {
+        width: 100px;
+        height: 40px;
+        background: #00BCD4;
+        border-style: solid;
+        border-color: purple;
+        color: black;
+    }
+
+    .gridborder {
+        border-top: 1px solid #000000;
+    }
+
+    /* Style the file names */
+    .file-name {
+        color: black;
+    }
+
+    /* Style the size and type */
+    .file-size, .file-type {
+        color: black;
+    }
+
+    /* Adjust the table width */
+    .custom-table {
+        width: 100%; /* You can adjust the percentage or use a fixed width */
+    }
+</style>
+
+<div style="border: 1px solid #000000; width: 800px; font-family: Arial;">
+    @using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        if (TempData["Message"] != null)
+        {
+            <p style="font-family: Arial; font-size: 16px; font-weight: 200; color: red">@TempData["Message"]</p>
+        }
+        <table>
+            <tr>
+                <td style="padding-bottom: 5px" colspan="3">
+                    <h2 style="color: #47bfed">FILE UPLOAD AND DOWNLOAD  </h2>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 50px;">
+                    <b style="color: #47bfed">File:</b>
+                </td>
+                <td>
+                    <input type="file" name="files" id="files" multiple="multiple" />
+                </td>
+                <td>
+                    <input type="submit" class="btn" name="submit" />
+                </td>
+            </tr>
+        </table>
+    }
+
+    <table class="gridborder row-borderhover order-column dataTable no-footer custom-table">
+        <thead>
+            <tr>
+                <th class="sorting_asc">
+                    @Html.DisplayNameFor(model => model.File)
+                </th>
+                <th class="sorting">
+                    @Html.DisplayNameFor(model => model.Size)
+                </th>
+                <th class="sorting">
+                    @Html.DisplayNameFor(model => model.Type)
+                </th>
+                <th class="sorting"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="sorting_1">
+                        <span class="file-name">@Html.DisplayFor(modelItem => item.File)</span>
+                    </td>
+                    <td class="sorting_1 file-size">
+                        @Html.DisplayFor(modelItem => item.Size)
+                    </td>
+                    <td class="sorting_1 file-type">
+                        @Html.DisplayFor(modelItem => item.Type)
+                    </td>
+                    <td class="sorting">
+                        @Html.ActionLink("Download", "Download", new { fileName = item.File })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
