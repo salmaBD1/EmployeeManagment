@@ -3,8 +3,8 @@
     "",
     "\\employeeManagemement",
     "\\employeeManagemement\\Views",
-    "\\employeeManagemement\\Views\\AppRoles"
+    "\\employeeManagemement\\Views\\Questions"
   ],
-  "SelectedNode": "\\employeeManagemement\\Views\\AppRoles\\Create.cshtml",
+  "SelectedNode": "\\employeeManagemement\\Views\\Questions\\Create.cshtml",
   "PreviewInSolutionExplorer": false
 }
