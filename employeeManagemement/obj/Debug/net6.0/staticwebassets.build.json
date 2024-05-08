@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VxeBEJVwtCsHsbmqyLNk3quBIDfTgfQgVBQMKpSCZD0=",
+  "Hash": "5fjazujuy+Pwd6cBFtw00hIRiFE+VsT8NxcT5aZ46Eg=",
   "Source": "employeeManagemement",
   "BasePath": "_content/employeeManagemement",
   "Mode": "Default",
@@ -1139,6 +1139,23 @@
       "OriginalItemSpec": "wwwroot\\Files\\Décorateur 2024.pdf"
     },
     {
+      "Identity": "C:\\Users\\SALMA\\source\\repos\\employeeManagemement\\employeeManagemement\\wwwroot\\Files\\gestion fichier io nio java.pdf",
+      "SourceId": "employeeManagemement",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\SALMA\\source\\repos\\employeeManagemement\\employeeManagemement\\wwwroot\\",
+      "BasePath": "_content/employeeManagemement",
+      "RelativePath": "Files/gestion fichier io nio java.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Files\\gestion fichier io nio java.pdf"
+    },
+    {
       "Identity": "C:\\Users\\SALMA\\source\\repos\\employeeManagemement\\employeeManagemement\\wwwroot\\Files\\JAVA Swing.pdf",
       "SourceId": "employeeManagemement",
       "SourceType": "Discovered",
@@ -1171,6 +1188,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Files\\Login.class"
+    },
+    {
+      "Identity": "C:\\Users\\SALMA\\source\\repos\\employeeManagemement\\employeeManagemement\\wwwroot\\Files\\Oracle.pdf",
+      "SourceId": "employeeManagemement",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\SALMA\\source\\repos\\employeeManagemement\\employeeManagemement\\wwwroot\\",
+      "BasePath": "_content/employeeManagemement",
+      "RelativePath": "Files/Oracle.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Files\\Oracle.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\SALMA\\source\\repos\\employeeManagemement\\employeeManagemement\\wwwroot\\Files\\Tuto EMSI-ORACLE (1).pdf",
+      "SourceId": "employeeManagemement",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\SALMA\\source\\repos\\employeeManagemement\\employeeManagemement\\wwwroot\\",
+      "BasePath": "_content/employeeManagemement",
+      "RelativePath": "Files/Tuto EMSI-ORACLE (1).pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Files\\Tuto EMSI-ORACLE (1).pdf"
     },
     {
       "Identity": "C:\\Users\\SALMA\\source\\repos\\employeeManagemement\\employeeManagemement\\wwwroot\\js\\site.js",
