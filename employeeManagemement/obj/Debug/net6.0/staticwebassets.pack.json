@@ -17,6 +17,18 @@
       "PackagePath": "staticwebassets\\Files\\Login.class"
     },
     {
+      "Id": "C:\\Users\\SALMA\\source\\repos\\employeeManagemement\\employeeManagemement\\wwwroot\\Files\\Oracle.pdf",
+      "PackagePath": "staticwebassets\\Files\\Oracle.pdf"
+    },
+    {
+      "Id": "C:\\Users\\SALMA\\source\\repos\\employeeManagemement\\employeeManagemement\\wwwroot\\Files\\Tuto EMSI-ORACLE (1).pdf",
+      "PackagePath": "staticwebassets\\Files\\Tuto EMSI-ORACLE (1).pdf"
+    },
+    {
+      "Id": "C:\\Users\\SALMA\\source\\repos\\employeeManagemement\\employeeManagemement\\wwwroot\\Files\\gestion fichier io nio java.pdf",
+      "PackagePath": "staticwebassets\\Files\\gestion fichier io nio java.pdf"
+    },
+    {
       "Id": "C:\\Users\\SALMA\\source\\repos\\employeeManagemement\\employeeManagemement\\wwwroot\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
     },
